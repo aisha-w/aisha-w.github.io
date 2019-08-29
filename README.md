@@ -1,13 +1,8 @@
-aisha w.
-
-#### about
-
+aisha w.  
 san francisco, ca 🌉  
 
-#### writing portfolio
+### writing portfolio
 
-See a collection of some [writing samples](/samples/README.md).
+See a collection of some [writing samples](/samples/README.md) 📝  
 
-Or, view my [github contributions](https://github.com/aisha-w).
-
-Always a work in-progress.
+Or, view my [documentation contributions](https://github.com/aisha-w) 💻
