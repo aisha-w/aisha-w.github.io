@@ -1,6 +1,3 @@
-aisha w.  
-san francisco, ca 🌉  
-
 ### writing portfolio
 
 See a collection of some [writing samples](/samples/README.md) 📝  
