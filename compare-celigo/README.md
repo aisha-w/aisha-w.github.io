@@ -1,7 +1,12 @@
-**Original copy** *(as of 29 August 2018)*:
-
-![](..\assets\celigo\celigo-integration-page-example.png)
+#### Celigo, Inc.  
+*Integration Platform as a Service (iPaaS) provider.*  
 
 **Edited copy**:  
 
-![](..\assets\celigo\celigo-integration-edit-example.png)
+![celigo-edited](..\assets\celigo\celigo-integration-edit-example.png)
+
+**Original copy** *(as of 29 August 2019)* :
+
+![celigo-original](..\assets\celigo\celigo-integration-page-example.png)
+
+<sub>[**back**](../copyedits/README.md)</sub>

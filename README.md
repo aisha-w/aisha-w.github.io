@@ -1,3 +1,5 @@
-See a collection of some [writing samples](samples/README.md) 📝  
+Hello! I'm still working on adding content to this site. 
 
-Or, view my [documentation contributions](https://github.com/aisha-w) 💻
+In the meantime, see a collection of some [writing samples](samples/README.md).
+
+Or, view my [documentation contributions](https://github.com/aisha-w).
