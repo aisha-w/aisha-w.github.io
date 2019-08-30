@@ -4,14 +4,6 @@ I focus on clear, concise, and technically-accurate documentation that is fueled
 
 All samples are listed in reverse chronological order.
 
-### copyedits
-
-Sometimes I visit websites, and [edit their copy](copyedits/README.md).
-
-These are good for getting a sense of my proofreading, editing, and organizational sensibilities.
-
-### samples
-
 CS 177: Software Engineering  --  Functional Specification  
 [Details the functional specifications of a simple tarot reader web app.](../assets/cs177-funspec.pdf)    
 
@@ -26,3 +18,5 @@ LING 433: Native Languages of the Americas -- Research Paper
 
 LING 445: Sociolinguistics -- Pop. Science Article  
 [Whistling and the brain, and how that helps us understand language](../assets/ling445-article.pdf)  
+
+Sometimes I visit websites, and [edit their copy](copyedits/README.md). These are good for getting a sense of my proofreading, editing, and organizational sensibilities.
