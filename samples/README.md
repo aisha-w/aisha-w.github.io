@@ -10,9 +10,7 @@ Sometimes I visit websites, and [edit their copy](copyedits/README.md).
 
 These are good for getting a sense of my proofreading, editing, and organizational sensibilities.
 
-### assets
-
-Miscellaneous documents that don't need to be put into separate categories.
+### samples
 
 CS 177: Software Engineering  --  Functional Specification  
 [Details the functional specifications of a simple tarot reader web app.](../assets/cs177-funspec.pdf)    
