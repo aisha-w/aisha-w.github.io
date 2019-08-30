@@ -5,6 +5,6 @@
 #### Celigo, Inc.  
 *Integration Platform as a Service (iPaaS) provider.*  
 
-[Compare](celigo-compare.md) -
+[Compare](\comparisons\celigo-compare.md) -
 [Edit](..\..\assets\celigo\celigo-integration-edit.pdf) -
 [Original](..\..\assets\celigo\celigo-integration-page.pdf) *(as of 29 August 2018)* -
