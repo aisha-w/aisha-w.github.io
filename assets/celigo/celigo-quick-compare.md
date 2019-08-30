@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 **Original copy**:
 
 ![](celigo-integration-page-example.png)
