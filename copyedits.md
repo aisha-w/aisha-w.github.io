@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## copyedit samples
 
 *Comparisons* are short snippets of both the original and edited copy, displayed side-by-side.

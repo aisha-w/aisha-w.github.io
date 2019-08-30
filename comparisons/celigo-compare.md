@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**Original copy**:
+**Original copy**  *(as of 29 August 2018)*:
 
 ![](celigo-integration-page-example.png)
 
