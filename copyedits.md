@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /copyedits/
 ---
 
 ## copyedit samples
@@ -9,6 +10,6 @@ layout: default
 #### Celigo, Inc.  
 *Integration Platform as a Service (iPaaS) provider.*  
 
-[Compare](\comparisons\celigo-compare.html) -
+[Compare](comparisons\celigo-compare.html) -
 [Edit](..\..\assets\celigo\celigo-integration-edit.pdf) -
 [Original](..\..\assets\celigo\celigo-integration-page.pdf) *(as of 29 August 2018)* -
