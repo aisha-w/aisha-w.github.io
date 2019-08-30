@@ -19,8 +19,7 @@ LING 447D: Information Structure -- Research Paper
 [Focus in Japanese and Korean Syntax](../assets/ling447-finalpaper.pdf)  
 
 LING 345: Pragmatics -- Research Paper  
-[From “That damn dog is barking again”, to “That dog is barking again 😠”:  
-Emojis as a complex expressive morpheme in computer-mediated communication](../assets/ling345-finalpaper.pdf)  
+[From “That damn dog is barking again”, to “That dog is barking again 😠”: Emojis as a complex expressive morpheme in computer-mediated communication](../assets/ling345-finalpaper.pdf)  
 
 LING 433: Native Languages of the Americas -- Research Paper  
 [The destabilization of multilingual coexistence: Language contact in the Vaupés River Basin](../assets/ling433-finalpaper.pdf)  
