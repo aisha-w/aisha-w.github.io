@@ -7,4 +7,4 @@
 
 [Compare](../celigo/README.md) -
 [Edit](..\assets\celigo\celigo-integration-edit.pdf) -
-[Original](..\assets\celigo\celigo-integration-page.pdf) *(as of 29 August 2018)* -
+[Original](..\assets\celigo\celigo-integration-page.pdf) *(as of 29 August 2018)*
