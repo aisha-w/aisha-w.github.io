@@ -6,7 +6,7 @@ layout: default
 
 I focus on clear, concise, and technically-accurate documentation that is fueled by empathy, accessibility, and equity.
 
-Sometimes I visit websites, and [edit their copy](copyedits.md). These are good for getting a sense of my proofreading, editing, and organizational sensibilities.
+Sometimes I visit websites, and [edit their copy](copyedits.html). These are good for getting a sense of my proofreading, editing, and organizational sensibilities.
 
 ### documentation
 
