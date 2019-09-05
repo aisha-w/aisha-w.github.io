@@ -166,7 +166,7 @@ A server can:
 
 #### Inventory View
 Regarding the inventory, you can:
-- Automatically upload inventory shipment receipts from [inventory-receipts.txt](#inventoryreceiptstxt)
+- Automatically upload inventory shipment receipts from [inventory-receipts.txt](#inventory-receiptstxt)
 - Or, manually enter new inventory items
 
 #### Additional Features
