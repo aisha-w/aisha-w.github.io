@@ -10,15 +10,15 @@ and inventory shipments.
 
   - [menu.txt](#menutxt)
   - [inventory.txt](#inventorytxt)
-  - [workers.txt](#workertxt)
-  - [inventory-receipts.txt](#inventoryreceiptstxt)
+  - [workers.txt](#workerstxt)
+  - [inventory-receipts.txt](#inventory-receiptstxt)
   - [System Files](#system-files)
 </details>
 <p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;[How To Run](#how-to-run)
 <details>
-<summary><a href="/README.md#features">Features</a></summary>
+<summary><a href="#features">Features</a></summary>
 
   - [Manager](#manager-view)
   - [Cook](#cook-view)
