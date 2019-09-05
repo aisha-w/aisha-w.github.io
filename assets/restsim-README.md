@@ -6,19 +6,19 @@ and inventory shipments.
 **Contents**  
 
 <details>
-<summary><a href="/README.md#prerequisite-files">Pre-requisite Files</a></summary>
+<summary><a href="#pre-requisite-files">Pre-requisite Files</a></summary>
 
   - [menu.txt](#menutxt)
   - [inventory.txt](#inventorytxt)
-  - [workers.txt](#workertxt)
-  - [inventory-receipts.txt](#inventoryreceiptstxt)
+  - [workers.txt](#workerstxt)
+  - [inventory-receipts.txt](#inventory-receiptstxt)
   - [System Files](#system-files)
 </details>
 <p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;[How To Run](#how-to-run)
 <details>
-<summary><a href="/README.md#features">Features</a></summary>
+<summary><a href="#features">Features</a></summary>
 
   - [Manager](#manager-view)
   - [Cook](#cook-view)
@@ -133,7 +133,7 @@ While running, the program may create or update files containing various pieces 
 
 ## How To Run
 
-1. Create and populate all of your [pre-requisite files](#prerequisite-files).
+1. Create and populate all of your [pre-requisite files](#pre-requisite-files).
 2. Place these files in your project folder.
 2. Compile and run `GUISimulation.java`.
 
