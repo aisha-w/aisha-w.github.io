@@ -5,8 +5,9 @@
 #### Celigo, Inc.  
 *Integration Platform as a Service (iPaaS) provider.*  
 
-[Compare](../compare-celigo/README.md) -
-[Edit](..\assets\celigo\celigo-integration-edit.pdf) -
-[Original](..\assets\celigo\celigo-integration-page.pdf) *(as of 29 August 2018)*
+[Compare](../compare/README.md#celigo-inc) -
+<a href="..\assets\celigo\celigo-integration-edit.pdf" target="_blank">Edit</a> -
+<a href="..\assets\celigo\celigo-integration-page.pdf" target="_blank">Original</a>
+*(as of 29 August 2018)*
 
 <sub>[**back**](../samples/README.md)</sub>

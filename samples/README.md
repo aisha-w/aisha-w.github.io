@@ -10,9 +10,9 @@ Sometimes I visit websites, and [edit their copy](../copyedits/README.md). These
 
 <a href="https://github.com/aisha-w/aisha-w.github.io/blob/master/assets/restsim-README.md" target="_blank">README of a restaurant simulation program.</a>
 
-I've [contributed to the documentation](https://github.com/aisha-w) for:
-+ [Unpythonic: Python meets Lisp and Haskell](https://github.com/Technologicat/unpythonic)
-+ [Duolingo API for Python](https://github.com/KartikTalwar/Duolingo)
+I've <a href="https://github.com/aisha-w" target="_blank">contributed to the documentation</a> for:  
++ <a href="https://github.com/Technologicat/unpythonic" target="_blank">Unpythonic: Python meets Lisp and Haskell</a>
++ <a href="https://github.com/KartikTalwar/Duolingo" target="_blank">Duolingo API for Python</a>
 
 ### research papers & articles
 
