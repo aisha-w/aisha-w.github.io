@@ -8,7 +8,7 @@ Sometimes I visit websites, and [edit their copy](../copyedits/README.md). These
 
 [Functional specification of a simple tarot reader web app.](../assets/cs177-funspec.pdf)
 
-[README of a restaurant simulation program.](../samples-restsim/README.md)
+<a href="https://github.com/aisha-w/aisha-w.github.io/blob/master/assets/restsim-README.md" target="_blank">README of a restaurant simulation program.</a>
 
 I've [contributed to the documentation](https://github.com/aisha-w) for:
 + [Unpythonic: Python meets Lisp and Haskell](https://github.com/Technologicat/unpythonic)
