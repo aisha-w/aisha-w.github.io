@@ -6,7 +6,7 @@ and inventory shipments.
 **Contents**  
 
 <details>
-<summary><a href="/README.md#prerequisite-files">Pre-requisite Files</a></summary>
+<summary><a href="#prerequisite-files">Pre-requisite Files</a></summary>
 
   - [menu.txt](#menutxt)
   - [inventory.txt](#inventorytxt)
