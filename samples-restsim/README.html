@@ -21,22 +21,290 @@
   }
 </style>
 </head>
-<body><div id="readme" class="container"><article class="markdown-body entry-content"><h2 id="writing-samples">writing samples</h2>
-<p>I focus on clear, concise, and technically-accurate documentation that is fueled by empathy, accessibility, and equity.</p>
-<p>Sometimes I visit websites, and <a href="../copyedits/README.md">edit their copy</a>. These are good for getting a sense of my proofreading, editing, and organizational sensibilities.</p>
-<h3 id="documentation">documentation</h3>
-<p><a href="../assets/cs177-funspec.pdf">Functional specification of a simple tarot reader web app.</a></p>
-<p><a href="../samples-restsim/README.md">README of a restaurant simulation program.</a></p>
-<p>I&apos;ve <a href="https://github.com/aisha-w">contributed to the documentation</a> for:</p>
+<body><div id="readme" class="container"><article class="markdown-body entry-content"><h1 id="restaurant-software-phase-2-">RESTAURANT SOFTWARE (Phase 2)</h1>
+<p>This program is a tool for restaurants to track: customer orders, the bill at each table inventory levels,
+and inventory shipments.</p>
+<p><strong>Contents</strong>  </p>
+<details>
+<summary><a href="/README.md#prerequisite-files">Pre-requisite Files</a></summary>
+
 <ul>
-<li><a href="https://github.com/Technologicat/unpythonic">Unpythonic: Python meets Lisp and Haskell</a></li>
-<li><a href="https://github.com/KartikTalwar/Duolingo">Duolingo API for Python</a></li>
+<li><a href="#menutxt">menu.txt</a></li>
+<li><a href="#inventorytxt">inventory.txt</a></li>
+<li><a href="#workertxt">workers.txt</a></li>
+<li><a href="#inventoryreceiptstxt">inventory-receipts.txt</a></li>
+<li><a href="#system-files">System Files</a></li></ul></details>
+<p>
+
+
+
+</p><p>&#xA0;&#xA0;&#xA0;&#xA0;<a href="#how-to-run">How To Run</a></p>
+<details>
+<summary><a href="/README.md#features">Features</a></summary>
+
+<ul>
+<li><a href="#manager-view">Manager</a></li>
+<li><a href="#cook-view">Cook</a></li>
+<li><a href="#server-view">Server</a></li>
+<li><a href="#inventory-view">Inventory</a></li>
+<li><a href="#additional-features">Additional Features</a></li></ul></details>
+<p>
+
+
+
+</p><p>&#xA0;&#xA0;&#xA0;&#xA0;<a href="#additional-information">Additional Information</a></p>
+<p>
+
+</p><p>&#xA0;&#xA0;&#xA0;&#xA0;<a href="#group-0217">Group 0217</a></p>
+<h2 id="pre-requisite-files">Pre-requisite Files</h2>
+<p>These are the text files you will need prior to running this program, and will be placed in the project folder. Make sure you use these filenames, otherwise the program may not run properly.</p>
+<h4 id="menu-txt">menu.txt</h4>
+<p>A text file detailing all menu items. Use the format:  </p>
+<pre><code class="language-json">[{
+  &quot;itemName&quot;: &quot;caesar salad&quot;,
+  &quot;ingredients&quot;: {
+    &quot;lettuce&quot;: 1,
+    &quot;croutons&quot;: 1,
+    ...
+    &quot;dressing&quot;: 1
+  },
+  &quot;price&quot;: 5.00,
+  &quot;numAdditions&quot;: 1
+  },
+  ...
+]</code></pre>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>itemName</code></td>
+<td>The name of the menu item.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>ingredients</code></td>
+<td>The ingredients needed for the menu item.</td>
+<td>ingredients list object</td>
+</tr>
+<tr>
+<td><code>ingredients/[ingredientName]</code></td>
+<td>The quantity of the ingredient needed for the menu item.</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>price</code></td>
+<td>The price of the menu item.</td>
+<td>float</td>
+</tr>
+<tr>
+<td><code>numAdditions</code></td>
+<td>The number of add-ons that can be included with the menu item.</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+<p><em>All fields are required. At least one ingredient must be defined.</em></p>
+<h4 id="inventory-txt">inventory.txt</h4>
+<p>A text file detailing opening inventory levels at the restaurant and the type of ingredients held
+in stock. Make sure to include all ingredients from <a href="#menutxt">menu.txt</a>. Use the format:  </p>
+<pre><code class="language-json">[{
+  &quot;ingredientName&quot;: &quot;lettuce&quot;,
+  &quot;minQuantity&quot;: 10,
+  &quot;currentQuantity&quot;: 50
+  },
+  ...
+]</code></pre>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ingredientName</code></td>
+<td>The name of the ingredient to add to the inventory.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>minQuantity</code></td>
+<td>The minimum amount, in units, of the ingredient the inventory can hold.</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>currentQuantity</code></td>
+<td>The current amount, in units, of the ingredient in the inventory.</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+<p><em>All fields required.</em></p>
+<h4 id="workers-txt">workers.txt</h4>
+<p>A text file detailing the number of each type of employees at the restaurant as well as tables available. Currently the program supports: Server, Cook, Manager, and Table. Use the format:</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: 5,
+  &quot;cook&quot;: 3,
+  &quot;manager&quot;: 2,
+  &quot;table&quot;: 10
+}</code></pre>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>server</code></td>
+<td>The number of servers working at your restaurant.</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>cook</code></td>
+<td>The number of cooks working in your restaurant&apos;s kitchen.</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>manager</code></td>
+<td>The number of managers overseeing your restaurant.</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td>The number of tables available at your restaurant.</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+<p><em>All fields required.</em></p>
+<h4 id="inventory-receipts-txt">inventory-receipts.txt</h4>
+<p>An <strong>optional</strong> text file that is used to update inventory items with the specified amount, in units. Use the format:</p>
+<pre><code class="language-json">[{
+  &quot;lettuce&quot;: 40,
+  &quot;chicken&quot;: 20,
+  ...
+  &quot;cheese&quot;: 10
+  },
+  ...
+]</code></pre>
+<p>Each list item can be viewed as a &quot;batch order&quot; of ingredients.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>| A batch order of ingredients for the kitchen inventory.</td>
+<td>ingredients list object</td>
+<td></td>
+</tr>
+<tr>
+<td><code>/[ingredientName]</code></td>
+<td>The quantity of the specified ingredient to add to the inventory.</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+<h3 id="system-files">System Files</h3>
+<p>While running, the program may create or update files containing various pieces of information.</p>
+<p><strong>requests.txt</strong>: A text file that is automatically created and updated whenever an ingredient level is below 10 quantities.<br><strong>inventory-listing.txt</strong>: A text file that details the inventory levels at a point in time for the manager to review.<br><strong>open-orders.txt</strong>: A text file that records all open-orders at time of request.<br><strong>same-day-payments</strong>: A folder that stores a summary of all payments by date.</p>
+<h2 id="how-to-run">How To Run</h2>
+<ol>
+<li>Create and populate all of your <a href="#prerequisite-files">pre-requisite files</a>.</li>
+<li>Place these files in your project folder.</li>
+<li>Compile and run <code>GUISimulation.java</code>.</li>
+</ol>
+<h2 id="features">Features</h2>
+<p>The GUI handles the following actions:</p>
+<h4 id="manager-view">Manager View</h4>
+<p>A manager can:</p>
+<ul>
+<li>View the inventory list</li>
+<li>View a list of all inventory requests</li>
+<li>View a list of all open orders</li>
+<li>Look-up the current quantity of stock for a particular inventory item</li>
 </ul>
-<h3 id="research-papers-articles">research papers &amp; articles</h3>
-<p><a href="../assets/ling447-finalpaper.pdf">Focus in Japanese and Korean Syntax</a></p>
-<p><a href="../assets/ling345-finalpaper.pdf">From &#x201C;That damn dog is barking again&#x201D;, to &#x201C;That dog is barking again &#x1F620;&#x201D;: Emojis as a complex expressive morpheme in computer-mediated communication</a>  </p>
-<p><a href="../assets/ling445-article.pdf">Whistling and the brain, and how that helps us understand language</a>  </p>
-<p><sub><a href="../README.md"><strong>back</strong></a></sub></p>
+<h4 id="cook-view">Cook View</h4>
+<p>A cook can:</p>
+<ul>
+<li>Accept an order</li>
+<li>Notify servers that an order is ready to deliver to customers</li>
+</ul>
+<h4 id="server-view">Server View</h4>
+<p>A server can:</p>
+<ul>
+<li>Make a new order:<ul>
+<li>With an option to make adjustments to an order</li>
+<li>But an order cannot be made if inventory is too low</li>
+</ul>
+</li>
+<li>Deliver an order<ul>
+<li>Acknowledge that an order has been delivered</li>
+<li>With option to give the customer a refund if the order was unsatisfactory</li>
+</ul>
+</li>
+<li>Bill a customer<ul>
+<li>With an option to bill by customer (separate checks)</li>
+<li>Or, an option to bill by table</li>
+</ul>
+</li>
+</ul>
+<h4 id="inventory-view">Inventory View</h4>
+<p>Regarding the inventory, you can:</p>
+<ul>
+<li>Automatically upload inventory shipment receipts from <a href="#inventoryreceiptstxt">inventory-receipts.txt</a></li>
+<li>Or, manually enter new inventory items</li>
+</ul>
+<h4 id="additional-features">Additional Features</h4>
+<p>Special features are indicated in bold.</p>
+<ul>
+<li>No standard output</li>
+<li>GUI handles invalid inputs using:<ul>
+<li>Exception handling</li>
+<li><strong>Regex notation</strong></li>
+<li>Use of appropriate methods</li>
+</ul>
+</li>
+<li>Orders are handled through the Server view or Cook view.<ul>
+<li>If there aren&apos;t enough ingredients in the inventory to make a menu item, a server cannot place that order.</li>
+<li>If a chef forgets an Order #1, they will not be allowed to prepare an Order #2 until they complete, acknowledge, or
+cancel Order #1, or any other actions you think should be allowed to resolve Order #1.</li>
+<li>If a server has not yet delivered an order that is ready for delivery, they cannot place another order until it&apos;s delivered.</li>
+</ul>
+</li>
+<li>Managers can request a list of open orders in the Manger view &gt; Open orders.</li>
+<li>Records of all payments for a given day can be found in the folder <code>same-day-payments/</code></li>
+<li>Servers can print a receipt for an entire table or individual person in Server view &gt; Prepare bill.<ul>
+<li>Tax is set at 13%</li>
+<li>If there are more than 8 individuals, a 15% gratuity charge is automatically set.</li>
+<li><strong>A customer can choose a tip amount of 10%, 15%, 20%. They can also input a custom percentage or dollar amount.</strong>
+-<strong>Placed orders are automatically assigned to an available chef.</strong>
+-<strong>Each employee must enter their ID number to view individual screens.</strong>
+-<strong>Inventory shipments can be imported through a text file or manually adjustment in Inventory view.</strong>
+-<strong>Upon termination of the window, a dialog displaying restaurant statistics collected during your simulation runtume.</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="additional-information">Additional Information</h2>
+<p><strong>Inventory Receipts</strong><br>This program assumes that when new inventory is received by the restaurant, an employee who is
+equipped with a scanner, will scan each inventory receipt. After each session, the data is converted into a batch order and recorded in <code>inventory-receipts.txt</code>.</p>
+<p><strong>Orders</strong><br>An <em>order</em> represents one single item from the menu (i.e., one cheeseburger). A server should record orders by the table number. For example, if a Party of 2 is seated at Table 1, all orders from that Party are recorded to Table 1.</p>
+<p><strong>Bill Splitting</strong><br>To support the bill splitting function, a Server identifies individual customers at each table. When
+it comes time to bill the multiple parties, the orders will have been already grouped and totaled.</p>
+<p><strong>Refunding Customers</strong><br>A server should be informed of the restaurant policies for refunding an order. It is up to the server to grant a refund when the order is delivered to the customer.</p>
+<p><strong>Additions to MenuItem</strong><br>There is a set number of additions that can be made to a given menu item. If the number of additions
+exceeds that limit, only the additions up to that point can be honored. E.g.,</p>
+<pre><code>if limit = 4 and additions = {&quot;tomato&quot;: 2, &quot;cheese&quot;: 3}
+&gt;&gt; then, only {&quot;tomato&quot;: 2, &quot;cheese&quot;: 2} is added</code></pre><p><strong>The price of MenuItem</strong><br>All additions made are +$0.10. Subtractions are not reflected in the price.</p>
+<p><strong>Inventory shipments</strong><br>Ingredients are automatically added to <code>requests.txt</code> when they fall below minimum levels. The standard order of an ingredient is 20 units. The manager can freely adjust these quantities when sending a shipment request e-mail.</p>
+<h2 id="group-0217">Group 0217</h2>
+<p><strong>Restaurant Software</strong><br>The University of Toronto<br><em>CSC 207 Software Design, Winter 2018</em><br>Chen, Gu, Washington, Zhu</p>
 </article></div><div style="background-color: #b4b2b2;width: 50px;height:50px;line-height: 50px;text-align: center;position: fixed;bottom: 10px;right: 10px;padding-top:5px;" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">
   <svg t="1533629773982" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1035" xlink="http://www.w3.org/1999/xlink" width="40" height="40"><defs><style type="text/css">@font-face { font-family: uc-nexus-iconfont; src: url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff") format("woff"), url("chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf") format("truetype"); }
   </style></defs><path d="M536.255427 195.182354c-7.804756-7.804756-17.966187-11.615549-28.311813-11.615549-9.43693 0-18.874883 3.449565-26.496467 10.163477-2.360767 1.452071-4.356214 3.267417-6.352685 5.262864L218.47792 455.611735c-15.607466 15.60542-15.607466 40.834011 0 56.43943 15.607466 15.607466 41.558511 15.607466 57.167001 0l193.46013-192.733583 0 600.526219c0 22.1423 17.787108 39.927361 39.927361 39.927361 22.140253 0 39.927361-17.785062 39.927361-39.927361L548.959773 319.317583 737.15704 508.422522c15.607466 15.607466 40.469714 15.607466 56.078203 0 15.607466-15.607466 15.425318-40.834011-0.182149-56.441477L536.255427 195.182354 536.255427 195.182354z" p-id="1036" fill="#333"/><path d="M101.784174 143.097092l816.674071 0c22.140253 0 39.925315-17.785062 39.925315-39.927361 0-22.140253-17.784038-39.925315-39.925315-39.925315L101.784174 63.244416c-22.140253 0-39.927361 17.785062-39.927361 39.925315C61.856813 125.31203 79.643921 143.097092 101.784174 143.097092L101.784174 143.097092z" p-id="1037" fill="#333"/></svg>
