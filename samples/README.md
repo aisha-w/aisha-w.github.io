@@ -6,7 +6,7 @@ Sometimes I visit websites, and [edit their copy](../copyedits/README.md). These
 
 ### documentation
 
-[Functional specification of a simple tarot reader web app.](../assets/cs177-funspec.pdf)
+<a href="../assets/cs177-funspec.pdf" target="_blank">Functional specification of a simple tarot reader web app.</a>
 
 <a href="https://github.com/aisha-w/aisha-w.github.io/blob/master/assets/restsim-README.md" target="_blank">README of a restaurant simulation program.</a>
 
@@ -16,10 +16,11 @@ I've [contributed to the documentation](https://github.com/aisha-w) for:
 
 ### research papers & articles
 
-[Focus in Japanese and Korean Syntax](../assets/ling447-finalpaper.pdf)
+<a href="../assets/ling447-finalpaper.pdf" target="_blank">Focus in Japanese and Korean Syntax.</a>
 
-[From “That damn dog is barking again”, to “That dog is barking again 😠”: Emojis as a complex expressive morpheme in computer-mediated communication](../assets/ling345-finalpaper.pdf)  
+<a href="../assets/ling345-finalpaper.pdf" target="_blank">From “That damn dog is barking again”, to “That dog is barking again 😠”: Emojis as a complex expressive morpheme in computer-mediated communication.</a>
 
-[Whistling and the brain, and how that helps us understand language](../assets/ling445-article.pdf)  
+<a href="../assets/ling445-article.pdf" target="_blank">Whistling and the brain, and how that helps us understand language.</a>
+
 
 <sub>[**back**](../README.md)</sub>
