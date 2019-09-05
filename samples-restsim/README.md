@@ -6,7 +6,7 @@ and inventory shipments.
 **Contents**  
 
 <details>
-<summary><a href="#prerequisite-files">Pre-requisite Files</a></summary>
+<summary><a href="#pre-requisite-files">Pre-requisite Files</a></summary>
 
   - [menu.txt](#menutxt)
   - [inventory.txt](#inventorytxt)
@@ -133,7 +133,7 @@ While running, the program may create or update files containing various pieces 
 
 ## How To Run
 
-1. Create and populate all of your [pre-requisite files](#prerequisite-files).
+1. Create and populate all of your [pre-requisite files](#pre-requisite-files).
 2. Place these files in your project folder.
 2. Compile and run `GUISimulation.java`.
 
