@@ -63,7 +63,7 @@ At least one ingredient must be defined.
 === `inventory.txt`
 
 A text file detailing the opening inventory levels at your restaurant, and the type of ingredients held in stock.
-Make sure to included all ingredients from <<menu.txt, `menu.txt`>>.
+Make sure to included all ingredients from <<menutxt, `menu.txt`>>.
 Use the format:
 ....
 [{
@@ -232,7 +232,7 @@ The previous order must be delivered, or canceled, first.
 === Inventory View
 
 Regarding the inventory, there are *two options to upload the ingredient data*.
-You can automatically upload inventory shipments from <<inventory-receipts.txt,  `inventory-receipts.txt`>>.
+You can automatically upload inventory shipments from <<inventory-receiptstxt,  `inventory-receipts.txt`>>.
 Or, you can manually enter new inventory items.
 
 === Additional Features
