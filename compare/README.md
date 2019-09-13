@@ -6,8 +6,7 @@
 <img src="..\assets\celigo\celigo-integration-edit-example.png" alt="edited-celigo-copy">
 
 **Original copy** *(as of 29 August 2019)* :
-
-![celigo-original](..\assets\celigo\celigo-integration-page-example.png)
+<img src="..\assets\celigo\celigo-integration-page-example.png" alt="original-celigo-copy">
 </details>
 
 <sub>[**back**](../copyedits/README.md)</sub>
