@@ -3,8 +3,7 @@
 <summary><i>Integration Platform as a Service (iPaaS) provider.</i></summary>
 
 **Edited copy**:  
-
-![celigo-edited](..\assets\celigo\celigo-integration-edit-example.png)
+<img src="..\assets\celigo\celigo-integration-edit-example.png" alt="edited-celigo-copy">
 
 **Original copy** *(as of 29 August 2019)* :
 
