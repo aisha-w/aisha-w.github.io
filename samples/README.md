@@ -7,7 +7,6 @@ Sometimes I visit websites, and [edit their copy](../copyedits/README.md). These
 ### documentation
 
 <a href="../assets/cs177-funspec.pdf" target="_blank">Functional specification of a simple tarot reader web app.</a>
-[test](../assets/cs177-funspec.pdf){:target="_blank"}
 
 <a href="https://github.com/aisha-w/aisha-w.github.io/blob/master/assets/restsim-README.adoc" target="_blank">README of a restaurant simulation program.</a>
 
