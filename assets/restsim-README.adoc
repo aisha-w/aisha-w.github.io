@@ -1,0 +1,299 @@
+= RESTAURANT SOFTWARE: (Phase 2)
+Chen; Gu; Washington; Zhu
+:toc:
+:toc-title: Contents
+
+This program is a tool for restaurants to track: customer orders, the bill at each table, inventory levels, and inventory shipments.
+
+== Pre-requisite Files
+
+These are the text (.txt) files you will need prior to running this program, and should be placed in the project folder.
+Make sure you use these filenames, otherwise the program may not run properly.
+
+=== `menu.txt`
+
+A text file detailing all menu items.
+Use the format:
+....
+[{
+  "itemName": "caesar salad",
+  "ingredients": {
+    "lettuce": 1,
+    "croutons": 1,
+    ...
+    "dressing": 1
+  },
+  "price": 5.00,
+  "numAdditions": 1
+ },
+  ...
+]
+....
+
+[cols="1,1,2", options="header"]
+|===
+|Element
+|Type
+|Description
+
+|`itemName`
+|string
+|The name of the menu item.
+
+|`ingredients`
+|list of ingredients
+|The ingredients needed for the menu item.
+
+|`ingredients/[ingredientName]`
+|integer
+|The quantity of the ingredient needed for the menu item.
+
+|`price`
+|number
+|The price of the menu item.
+
+|`numAdditions`
+|integer
+|The number of add-ons that can be included with the menu item.
+|===
+
+*All fields required.*
+At least one ingredient must be defined.
+
+=== `inventory.txt`
+
+A text file detailing the opening inventory levels at your restaurant, and the type of ingredients held in stock.
+Make sure to included all ingredients from <<menu.txt, `menu.txt`>>.
+Use the format:
+....
+[{
+  "ingredientName": "lettuce",
+  "minQuantity": 10,
+  "currentQuantity": 50
+  },
+  ...
+]
+....
+
+[cols="1,1,2", options="header"]
+|===
+|Element
+|Type
+|Description
+
+|`ingredientName`
+|string
+|The name of the ingredient to add to the inventory.
+
+|`minQuantity`
+|integer
+|The minimum amount of the ingredient the inventory can hold.
+
+|`currentQuantity`
+|integer
+|The current amount of the ingredient in the inventory.
+|===
+
+*All fields required.*
+
+=== `workers.txt`
+
+A text file detailing the number of each type of employee at the restaurant, as well as tables available.
+Currently, the program supports: Server, Cook, Manager, and Table.
+Use the format:
+....
+{
+  "server": 5,
+  "cook": 3,
+  "manager": 2,
+  "table": 10
+}
+....
+
+[cols="1,1,2", options=header]
+|===
+|Element
+|Type
+|Description
+
+|`server`
+|integer
+|The number of servers working in your restaurant.
+
+|`cook`
+|integer
+|The number of cooks working in your restaurant's kitchen.
+
+|`manager`
+|integer
+|The number of managers supervising your restaurant.
+
+|`table`
+|integer
+|The number of tables available in your restaurant.
+|===
+
+*All fields required.*
+
+=== `inventory-receipts.txt`
+
+An _optional_ text file used to update inventory items with the specified amount.
+Use the format:
+....
+[{
+  "lettuce": 40,
+  "chicken": 20,
+  ...
+  "cheese": 10
+  },
+  ...
+]
+....
+
+[cols="1,1,2", options=header]
+|===
+|Element
+|Type
+|Description
+
+|
+|list of ingredients
+|A "batch order" of ingredients for the kitchen inventory.
+A batch order can be thought of as an individual shipment of ingredients.
+
+|`/[ingredientName]`
+|integer
+|The quantity of `[ingredientName]` to add to the batch order.
+|===
+
+== Additional Files
+
+While running the restaurant simulation, the program may create or update files containing various pieces of information.
+
+`requests.txt`:: A text file that is automatically created and updated whenever an ingredient level is below 10.
+`inventory-listing.txt`:: A text file that details the inventory levels at a point in time.
+Typically, the manager will review this file.
+`open-orders.txt`:: A text file that records all open orders at time of request.
+`same-day-payments/`:: A folder that stores a summary of all payments filled in a day.
+Files are sorted by date.
+
+== How To Run
+--
+. Create and populate all of your <<pre-requisite-files, pre-requisite files>>.
+. Place these files in your project folder.
+. Compile and run `GUISimulation.java`.
+--
+== Features
+
+The GUI handles several restaurant functions. Special features are indicated in *bold*.
+
+=== Manager View
+
+A manager can:
+--
+* View the inventory list
+* View a list of all inventory requests
+* View a list of all open orders
+* Look-up the current quantity of a particular inventory item
+--
+
+=== Cook View
+
+A cook can:
+--
+* Accept an order
+* Notify servers that an order is ready for delivery
+--
+
+_Note_::
+A cook cannot begin a new order until a previous order has been completed, acknowledged, or canceled.
++
+*A cook is automatically assigned a placed order*.
+
+=== Server View
+
+A server can:
+--
+* Make a new order
+** Optional ingredient adjustments
+* Deliver an order
+** Acknowledge that an order was delivered
+** Ability to issue refunds at servers' discretion
+* Bill a customer
+** By table, or by guest (separate checks)
+--
+
+_Note_::
+A server cannot place an order if there are insufficient ingredients to make the menu item.
++
+A server cannot place a new order if a previous order is ready, but undelivered.
+The previous order must be delivered, or canceled, first.
+
+=== Inventory View
+
+Regarding the inventory, there are *two options to upload the ingredient data*.
+You can automatically upload inventory shipments from <<inventory-receipts.txt,  `inventory-receipts.txt`>>.
+Or, you can manually enter new inventory items.
+
+=== Additional Features
+
+Additional features, and notes on features:
+
+* No standard output
+* GUI handles invalid inputs using:
+** Exception handling
+** *Regex notation*
+** Use of appropriate methods
+* Billing
+** Tax is set at 13%
+** Automatic 15% gratuity charge for parties of 8+ guests
+** Tips
+*** *Choice of default tip amounts of 10%, 15%, or 20%*
+*** *Customer can indicate a custom percentage or dollar amount*
+* *Each employee must enter their ID number to view their respective screens.*
+* *Upon termination of the window, a dialog displaying collected statistics will appear.*
+
+== Additional Information
+
+Inventory Receipts::
+This program assumes that when new inventory is received by the restaurant, an employee will scan each receipt.
+After the shipment is scanned, the data is converted into a batch order and recorded in `inventory-receipts.txt`.
+
+Orders::
+An _order_ represents one single item from the menu (i.e., one caesar salad).
+A server should record orders by table number.
+For example, if a Party of 2 is seated at Table 1, all orders from that Party are recorded to Table 1.
+
+Bill Splitting::
+To support the bill splitting function, a server assigns individual guests a number.
+When it comes time to bill, if splitting is not requested, the orders will be combined and totaled.
+
+Refunding Customers::
+A server should be informed of the restaurant policies for refunding an order.
+Refunds are handled at the server's discretion.
+
+Additions to a Menu Item::
+There is a set number of additions that can be made to a given menu item.
+If the number of additions exceeds that limit, only the additions up to that point can be honored.
+E.g.,
+....
+if limit=4 and additions={"tomato": 2, "cheese": 3}
+then, only {"tomato":2, "cheese": 2} is added
+....
+
+Price of Menu Items::
+All additions are an additional $0.10.
+Subtractions are not reflected in the price.
+
+Inventory Shipments::
+Ingredients are automatically added to `requests.txt` when they fall below their minimum quantity.
+The standard order of an ingredient is 20.
+A manager can freely adjust these quantities when sending a shipment request e-mail.
+
+== Group 0217
+
+[%hardbreaks]
+*Restaurant Software*
+The University of Toronto
+_CSC 207 Software Design, Winter 2018_
+Chen, Gu, Washington, Zhu
