@@ -1,6 +1,6 @@
 = RESTAURANT SOFTWARE: (Phase 2)
 Chen; Gu; Washington; Zhu
-:toc:
+:toc: preamble
 :toc-title: Contents
 
 This program is a tool for restaurants to track: customer orders, the bill at each table, inventory levels, and inventory shipments.
