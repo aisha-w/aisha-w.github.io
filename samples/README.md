@@ -1,7 +1,5 @@
 ## writing samples
 
-I focus on clear, concise, and technically-accurate documentation that is fueled by empathy, accessibility, and equity.
-
 ### documentation
 
 <a href="../assets/cs177-funspec.pdf" target="_blank">Functional specification of a simple tarot reader web app.</a>
