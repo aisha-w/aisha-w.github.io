@@ -1,6 +1,6 @@
-### About
+## about
 
-I focus on clear, concise, and audience-driven documentation that is fueled by empathy, accessibility, and equity. I currently write and edit technical documentation for [SiFive](https://www.sifive.com). 
+I focus on clear, concise, and audience-driven documentation that is fueled by empathy, accessibility, and equity. I currently write and edit technical documentation for [SiFive](https://www.sifive.com).
 
 A collection of some writing samples are available [here](samples/README.md).
 
